@@ -1,0 +1,26 @@
+{
+  "name": "amillot/mechanical-bundle",
+  "description": "Bundle that manage mechanic.",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Adrien MILLOT",
+      "email": "adrien.millot@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4"
+  },
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "amillot\\MechanicalBundle\\": ""
+    }
+  },
+  "autoload-dev": {},
+  "config": {
+    "bin-dir": "bin",
+    "sort-packages": true
+  }
+}
