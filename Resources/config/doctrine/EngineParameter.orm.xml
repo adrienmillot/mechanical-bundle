@@ -3,8 +3,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                           https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="amillot\MechanicalBundle\Entity\Engine" table="engines">
-        <one-to-many field="engineParameters" target-entity="amillot\MechanicalBundle\Entity\EngineParameter" mapped-by="engine" />
+    <entity name="amillot\MechanicalBundle\Entity\EngineParameter" table="engine_parameters">
     </entity>
 
 </doctrine-mapping>

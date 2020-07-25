@@ -1,0 +1,17 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <mapped-superclass name="amillot\MechanicalBundle\Entity\AbstractEngineParameter" repository-class="amillot\MechanicalBundle\Repository\EngineParameterRepository">
+        <id name="id" type="string" column="id">
+            <generator strategy="UUID"/>
+        </id>
+
+        <field name="value" column="value" type="string" />
+
+        <many-to-one field="engine" target-entity="amillot\MechanicalBundle\Entity\Engine" inversed-by="engineParameters" />
+        <many-to-one field="parameter" target-entity="amillot\MechanicalBundle\Entity\Parameter" inversed-by="engineParameters" />
+    </mapped-superclass>
+
+</doctrine-mapping>

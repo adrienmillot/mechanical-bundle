@@ -3,8 +3,12 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                           https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="amillot\MechanicalBundle\Entity\Engine" table="engines">
-        <one-to-many field="engineParameters" target-entity="amillot\MechanicalBundle\Entity\EngineParameter" mapped-by="engine" />
-    </entity>
+    <mapped-superclass name="amillot\MechanicalBundle\Entity\AbstractParameter" repository-class="amillot\MechanicalBundle\Repository\ParameterRepository">
+        <id name="id" type="string" column="id">
+            <generator strategy="UUID"/>
+        </id>
+
+        <field name="name" column="name" type="string" />
+    </mapped-superclass>
 
 </doctrine-mapping>
