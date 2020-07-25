@@ -3,8 +3,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                           https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="amillot\MechanicalBundle\Entity\Motor" table="motors">
-        <one-to-many field="sensors" target-entity="amillot\MechanicalBundle\Entity\Sensor" mapped-by="motor" />
+    <entity name="amillot\MechanicalBundle\Entity\Sensor" table="sensors">
     </entity>
 
 </doctrine-mapping>
