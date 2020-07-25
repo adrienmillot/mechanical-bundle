@@ -2,6 +2,8 @@
 
 namespace amillot\MechanicalBundle\Entity;
 
+use amillot\MechanicalBundle\Traits\SensorListAware;
+
 /**
  * Class Motor
  *
@@ -9,4 +11,12 @@ namespace amillot\MechanicalBundle\Entity;
  */
 class Motor extends AbstractMotor
 {
+    use SensorListAware {
+        SensorListAware::__construct as private __sensorListAwareConstruct;
+    }
+
+    public function __construct()
+    {
+        $this->__sensorListAwareConstruct();
+    }
 }
