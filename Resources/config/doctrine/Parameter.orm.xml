@@ -5,6 +5,7 @@
 
     <entity name="amillot\MechanicalBundle\Entity\Parameter" table="parameters">
         <one-to-many field="engineParameters" target-entity="amillot\MechanicalBundle\Entity\EngineParameter" mapped-by="parameter" />
+        <one-to-many field="sensorParameters" target-entity="amillot\MechanicalBundle\Entity\SensorParameter" mapped-by="parameter" />
     </entity>
 
 </doctrine-mapping>
