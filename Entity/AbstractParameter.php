@@ -5,6 +5,7 @@ namespace amillot\MechanicalBundle\Entity;
 use amillot\MechanicalBundle\Model\ParameterInterface;
 use amillot\MechanicalBundle\Traits\EngineParameterListAware;
 use amillot\MechanicalBundle\Traits\Namable;
+use amillot\MechanicalBundle\Traits\SensorListAware;
 
 /**
  * Class AbstractParameter

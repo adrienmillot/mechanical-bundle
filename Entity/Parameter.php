@@ -2,6 +2,8 @@
 
 namespace amillot\MechanicalBundle\Entity;
 
+use amillot\MechanicalBundle\Traits\SensorParameterListAware;
+
 /**
  * Class Parameter
  *
@@ -9,4 +11,12 @@ namespace amillot\MechanicalBundle\Entity;
  */
 class Parameter extends AbstractParameter
 {
+    use SensorParameterListAware {
+        SensorParameterListAware::__construct as private __sensorParameterListAwareConstruct;
+    }
+
+    public function __construct()
+    {
+        $this->__sensorParameterListAwareConstruct();
+    }
 }
