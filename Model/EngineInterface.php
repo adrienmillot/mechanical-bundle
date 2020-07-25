@@ -3,6 +3,7 @@
 namespace amillot\MechanicalBundle\Model;
 
 use amillot\MechanicalBundle\Model\Traits\EngineParameterListAwareInterface;
+use amillot\MechanicalBundle\Model\Traits\MotorListAwareInterface;
 use amillot\MechanicalBundle\Model\Traits\NamableInterface;
 
 /**
@@ -10,6 +11,6 @@ use amillot\MechanicalBundle\Model\Traits\NamableInterface;
  *
  * @author Adrien MILLOT <adrien.millot@gmail.com>
  */
-interface EngineInterface extends EngineParameterListAwareInterface, NamableInterface
+interface EngineInterface extends EngineParameterListAwareInterface, MotorListAwareInterface, NamableInterface
 {
 }

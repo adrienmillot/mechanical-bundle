@@ -3,6 +3,7 @@
 namespace amillot\MechanicalBundle\Entity;
 
 use amillot\MechanicalBundle\Traits\EngineParameterListAware;
+use amillot\MechanicalBundle\Traits\MotorListAware;
 
 /**
  * Class Engine
@@ -15,8 +16,13 @@ class Engine extends AbstractEngine
         EngineParameterListAware::__construct as private __engineParameterListAwareConstruct;
     }
 
+    use MotorListAware {
+        MotorListAware::__construct as private __motorListAwareConstruct;
+    }
+
     public function __construct()
     {
         $this->__engineParameterListAwareConstruct();
+        $this->__motorListAwareConstruct();
     }
 }
