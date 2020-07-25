@@ -6,10 +6,10 @@ use amillot\MechanicalBundle\Model\Traits\EngineParameterListAwareInterface;
 use amillot\MechanicalBundle\Model\Traits\NamableInterface;
 
 /**
- * Interface EngineInterface
+ * Interface ParameterInterface
  *
  * @author Adrien MILLOT <adrien.millot@gmail.com>
  */
-interface EngineInterface extends EngineParameterListAwareInterface, NamableInterface
+interface ParameterInterface extends EngineParameterListAwareInterface, NamableInterface
 {
 }
